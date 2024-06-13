@@ -4,6 +4,16 @@ public class Podcast extends Audio {
     private String presetador;
     private  String descripcion;
 
+    @Override
+    public int getClasificacion() {
+        if(getTotalReproducciones()>=2000){
+            return 9;
+        }
+        else{
+            return 2;
+        }
+    }
+
     public String getPresetador() {
         return presetador;
     }
